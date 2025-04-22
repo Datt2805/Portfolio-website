@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #121212;
+    background-image: linear-gradient(to right, #3f331e 1px, transparent 1px),
+        linear-gradient(to bottom, #3f331e 1px, transparent 1px);
+    background-size: 20px 20px;
+    overflow: hidden;
+}
+
+#cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color:rgba(245, 177, 51, 0.47);
+    border-radius: 50%;
+    position: fixed; 
+    filter: blur(100px);
+    z-index: 9;
+    pointer-events: none;
+}
+
+.image-container {
+    width: 100%;
+    height: 100px;
+}
+img {
+    width: 100px;
+    height: 100px;
+    mix-blend-mode: difference;
+    filter: #F5B133 brightness(1.2) sepia(0.8) hue-rotate(20deg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: clamp(2rem, 8vw, 8rem); /* Responsive font size */
+    font-weight: 700;
+    margin-top: 40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.text-1 {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.text-2 {
+    color: #f5b133;
+    transition: color 0.3s ease;
+}
+
+.text-container sup {
+    margin-left: 10px;
+}
+
+.text-container i {
+    font-size: 0.5em;
+}
+
+.text-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.text-3 {
+    color: #fff;
+}
+
+.fa-solid {
+    color: #f5b133;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.text-4 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.text-container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.text-5 {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #F5B133;
+    color: #000;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-5:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #F5B133;
+    color: #000;;
+    border-color: #F5B133;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.icond-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.icond-container a i {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icond-container i:hover {
+    color: #f5b133;
+    transition: 0.3s;
+}
+
+.text-container-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text-container-4 h1 {
+    position: relative;
+}
+
+.text-container-4 h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 0%;
+    background-color: #f5b133;
+    transition: width 0.3s ease;
+}
+
+.text-container-4:hover h1::after {
+    width: 100%;
+}
+
+.text-container-4 i {
+    color: #f5b133;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        font-size: 3em;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
